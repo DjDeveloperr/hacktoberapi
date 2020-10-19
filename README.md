@@ -2,7 +2,8 @@
 Simple API to check eligibility of Repositories and Pull Requests for Hacktoberfest. 
 
 ## Setup
-You just need a `.env` file with your Github Access Token (`TOKEN`).
+`npm install` and `npm start`
+You also need a `.env` file with your Github Access Token (`TOKEN`).
 
 ## API Endpointers
 ```http
