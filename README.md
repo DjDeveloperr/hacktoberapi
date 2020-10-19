@@ -1,6 +1,8 @@
 # Hacktober API
 Simple API to check eligibility of Repositories and Pull Requests for Hacktoberfest. 
 
+API is hosted [here](https://hf.djd.wtf) at the moment.
+
 ## Setup
 `npm install` and `npm start`
 You also need a `.env` file with your Github Access Token (`TOKEN`).
