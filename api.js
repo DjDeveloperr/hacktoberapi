@@ -16,12 +16,12 @@ api.get("/repo/:user/:repo", (req, res) => {
 			"Accept": "application/vnd.github.mercy-preview+json"
 		}
 	}).then(data => {
-		if(data.statusCode != 200) return res.status(data.statusCode).json({ code: data.statusCode, msg: "Failed" });
+		if(data.statusCode != 200) return res.status(data.statusCode).json({ code: 404, msg: "Not Found" });
 		let topics = data.body.names;
 		let eligible = typeof topics.find(t => ["hacktoberfest", "hacktoberfest-2020"].includes(t.toLowerCase())) == "string";
 		res.json({ repo, user, eligible });
 	}).catch(e => {
-		res.status(404).json({ code: 404, msg: "Error - " + e.message });
+		res.status(404).json({ code: 404, msg: e.message });
 	})
 });
 
